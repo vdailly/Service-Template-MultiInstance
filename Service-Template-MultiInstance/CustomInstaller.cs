@@ -91,6 +91,7 @@ namespace Service_Template_MultiInstance
             {
                 var svcname = Context.Parameters["servicename"];
                 this.serviceInstaller.ServiceName = svcname;
+                this.serviceInstaller.DisplayName = svcname;
 
                 //define the executable path to store the name of the service within the service itself
                 //this is because the servicename of the installer and of the service must be the same
