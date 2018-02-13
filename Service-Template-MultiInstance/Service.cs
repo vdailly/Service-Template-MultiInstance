@@ -12,6 +12,25 @@ namespace Service_Template_MultiInstance
 {
     public partial class Service : ServiceBase
     {
+
+        /* ressources used to build this template:
+         * 
+         * https://msdn.microsoft.com/fr-fr/library/system.configuration.install.installer(v=vs.110).aspx
+         * https://msdn.microsoft.com/fr-fr/library/system.configuration.install.installcontext(v=vs.110).aspx
+         * https://msdn.microsoft.com/fr-fr/library/system.diagnostics.eventloginstaller(v=vs.110).aspx
+         * 
+         * https://docs.microsoft.com/en-us/dotnet/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer
+         * 
+         * http://www.damirscorner.com/blog/posts/20140804-InstallNetWindowsServiceWithADifferentName.html
+         * https://journalofasoftwaredev.wordpress.com/2008/07/16/multiple-instances-of-same-windows-service/
+         * https://social.msdn.microsoft.com/Forums/vstudio/en-US/162c377f-2926-4a80-916b-69449c1e95b5/windows-service-dynamic-servicename?forum=csharpgeneral
+         * https://diaryofadeveloper.wordpress.com/2012/05/
+         * https://social.msdn.microsoft.com/Forums/vstudio/en-US/c937d1f4-cee9-4a0f-8271-27d62a90e3fa/windows-service-multiple-instances?forum=csharpgeneral
+         * 
+         * 
+         * 
+        */
+
         //added constants used as default value for service installation and runtime
         public const string DefaultName        = "Service";
         public const string DefaultDisplayName = "Service";

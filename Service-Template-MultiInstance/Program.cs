@@ -16,6 +16,7 @@ namespace Service_Template_MultiInstance
         {
             //for multi-instance services, register a command-line <path to service>.exe "instancename"
             //installer should use "instancename" and as display name "ServiceName-instancename"
+            
             Environment.GetCommandLineArgs();
 
             var service = new Service(args);
