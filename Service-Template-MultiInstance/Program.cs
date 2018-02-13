@@ -12,14 +12,15 @@ namespace Service_Template_MultiInstance
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        static void Main()
+        static void Main(string[] args)
         {
-            ServiceBase[] ServicesToRun;
-            ServicesToRun = new ServiceBase[]
-            {
-                new Service1()
-            };
-            ServiceBase.Run(ServicesToRun);
+            //for multi-instance services, register a command-line <path to service>.exe "instancename"
+            //installer should use "instancename" and as display name "ServiceName-instancename"
+            Environment.GetCommandLineArgs();
+
+            var service = new Service(args);
+
+            ServiceBase.Run(service);
         }
     }
 }
